@@ -191,10 +191,10 @@ aws --endpoint-url=http://localhost:4566 dynamodb scan --table-name SensorData -
 
 ```bash
 # 停止（データは保持）
-docker-compose down
+docker compose down
 
 # 再起動
-docker-compose up -d
+docker compose up -d
 
 # Python 仮想環境を終了する場合
 deactivate
