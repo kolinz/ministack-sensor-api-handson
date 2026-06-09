@@ -1,4 +1,4 @@
-# sensor-api — MiniStack + Express + Node-RED（Docker Compose 一式）
+# ministack-sensor-api-handson — MiniStack + Express + Node-RED（Docker Compose 一式）
 
 ## 構成
 
