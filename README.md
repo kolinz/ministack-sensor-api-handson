@@ -30,8 +30,9 @@ sensor-api/
 ### ステップ 1 — Docker Compose でバックグラウンド起動
 
 ```bash
-cd sensor-api
-docker-compose up --build -d
+git clone https://github.com/kolinz/ministack-sensor-api-handson.git
+cd ministack-sensor-api-handson
+docker compose up --build -d
 ```
 
 `-d` をつけることでバックグラウンド起動となり、同じターミナルで続けて作業できます。
@@ -146,14 +147,6 @@ curl http://localhost:3000/health
 ---
 
 ### ステップ 8 — DynamoDB の確認
-
-```bash
-# テーブル一覧（awslocal 推奨）
-awslocal dynamodb list-tables
-
-# データ全件スキャン
-awslocal dynamodb scan --table-name SensorData
-```
 
 AWS CLI を直接使う場合：
 ```bash
