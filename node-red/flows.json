@@ -1,0 +1,87 @@
+[
+  {
+    "id": "flow1",
+    "type": "tab",
+    "label": "センサーデータ送信",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "inject1",
+    "type": "inject",
+    "z": "flow1",
+    "name": "テストデータ注入",
+    "props": [
+      { "p": "payload" }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "{\"sensor_name\":\"temp-sensor-01\",\"temperature\":24.5,\"date\":\"2026-06-08\",\"time\":\"14:30:00\"}",
+    "payloadType": "json",
+    "x": 160,
+    "y": 120,
+    "wires": [["setHeaders1"]]
+  },
+  {
+    "id": "setHeaders1",
+    "type": "function",
+    "z": "flow1",
+    "name": "Content-Type セット",
+    "func": "msg.headers = { 'Content-Type': 'application/json' };\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 370,
+    "y": 120,
+    "wires": [["httpRequest1"]]
+  },
+  {
+    "id": "httpRequest1",
+    "type": "http request",
+    "z": "flow1",
+    "name": "POST /sensors",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://sensor-api:3000/sensors",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 580,
+    "y": 120,
+    "wires": [["debug1"]]
+  },
+  {
+    "id": "debug1",
+    "type": "debug",
+    "z": "flow1",
+    "name": "レスポンス確認",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 790,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "comment1",
+    "type": "comment",
+    "z": "flow1",
+    "name": "センサーデータ登録フロー",
+    "info": "Inject ノードの payload を編集してセンサーデータを変更できます。\n\n必須フィールド:\n- sensor_name: センサー名 (文字列)\n- temperature: 温度 (数値)\n- date: 日付 (YYYY-MM-DD)\n- time: 時刻 (HH:MM:SS)",
+    "x": 200,
+    "y": 60,
+    "wires": []
+  }
+]
