@@ -165,7 +165,7 @@ aws --endpoint-url=http://localhost:4566 dynamodb scan --table-name SensorData -
 1. ブラウザで http://localhost:1880 を開く
 2. 右上のハンバーガーメニュー（≡）をクリック
 3. **Import** を選択
-4. **`node-red/flows.json`** をウィンドウ内にドラッグ＆ドロップ
+4. **`node-red/flows.json`** をウィンドウ内にドラッグ＆ドロップ。あるいは、[node-red/flows.json](https://github.com/kolinz/ministack-sensor-api-handson/blob/main/node-red/flows.json) のコードをコピーして貼り付け。
 5. **Import** ボタンをクリック
 6. 画面上部に **「センサーデータ送信」** タブが表示されたらクリックして切り替える
 7. 右上の **Deploy** ボタン（赤）をクリックして反映
