@@ -44,7 +44,7 @@ docker compose up --build -d
 
 起動状況の確認：
 ```bash
-docker-compose ps
+docker compose ps
 ```
 
 > **ℹ️ MiniStack について**
