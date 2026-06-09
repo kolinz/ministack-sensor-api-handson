@@ -3,6 +3,10 @@
 > **ℹ️ MiniStack について**
 > AWSローカルエミュレータのLocalStack Community版は2026年3月に終了しました。本プロジェクトでは代替として [MiniStack](https://ministack.org/)（MIT ライセンス・無料・認証不要）を使用しています。MiniStackを使うことで、AWS利用によるコストが生じることなく、AWSを用いたクラウドシステム開発ができます。
 
+> **前提となる作業環境について**
+> WSL2(WindowsないのLinux)・Linux・Macを想定しています。また、Docker環境も必要になります。
+
+
 ## 構成
 
 ```
