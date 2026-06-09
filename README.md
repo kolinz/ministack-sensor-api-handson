@@ -3,7 +3,7 @@
 ## 構成
 
 ```
-sensor-api/
+ministack-sensor-api-handson/
 ├── docker-compose.yml   # MiniStack + Express API + Node-RED
 ├── api/
 │   ├── Dockerfile
