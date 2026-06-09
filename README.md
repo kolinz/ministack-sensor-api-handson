@@ -1,5 +1,8 @@
 # ministack-sensor-api-handson — MiniStack + Express + Node-RED（Docker Compose 一式）
 
+> **ℹ️ MiniStack について**
+> AWSローカルエミュレータのLocalStack Community版は2026年3月に終了しました。本プロジェクトでは代替として [MiniStack](https://ministack.org/)（MIT ライセンス・無料・認証不要）を使用しています。MiniStackを使うことで、AWS利用によるコストが生じることなく、AWSを用いたクラウドシステム開発ができます。
+
 ## 構成
 
 ```
@@ -46,9 +49,6 @@ docker compose up --build -d
 ```bash
 docker compose ps
 ```
-
-> **ℹ️ MiniStack について**
-> LocalStack Community版は2026年3月に終了しました。本プロジェクトでは代替として MiniStack（MIT ライセンス・無料・認証不要）を使用しています。
 
 ---
 
