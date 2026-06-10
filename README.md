@@ -85,7 +85,7 @@ pip install awscli
 
 ### ステップ 4 — AWS CLI の初期設定（初回のみ）
 
-LocalStack はキーを検証しないため、ダミー値で構いません：
+MiniStack はキーを検証しないため、ダミー値で構いません：
 
 ```bash
 aws configure
